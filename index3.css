@@ -1,0 +1,230 @@
+
+body{
+    margin: 0;
+}
+.conteiner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 13px;
+    min-height: 70vw;
+    background-color: #274160;
+}
+.clock-conteiner{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.clock {
+    position: relative;
+    width: 450px;
+    height: 450px;
+    margin: 15px auto;
+    box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
+        inset 5px 5px 10px rgba(0, 0, 0, 0.5),
+        inset 5px 5px 20px rgba(0, 0, 0, 0.2),
+        inset -5px -5px 15px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #2f363d;
+
+}
+
+.clock::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 48%;
+    background-color: #2f363e;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    z-index: 10000;
+}
+
+.clock .arrow {
+    position: absolute;
+    height: 49%;
+    top: 18px;
+    left: 49%;
+    width: 5px;
+    background-color: white;
+}
+
+.clock .arrow-minut {
+    position: absolute;
+    width: 5px;
+    height: 100px;
+    top: 34%;
+    left: 43%;
+    background-color: #2dd55f;
+}
+
+.clock .arrow-date {
+    position: absolute;
+    height: 70px;
+    width: 5px;
+    top: 36%;
+    left: 55%;
+    background-color: red;
+}
+
+.clock span {
+    position: absolute;
+    inset: 20px;
+    color: #fff;
+    text-align: center;
+    transform: rotate(calc(30deg * var(--i)));
+}
+
+.clock span b {
+    font-size: 2em;
+    opacity: 0.25;
+    font-weight: 600;
+    display: inline-block;
+    transform: rotate(calc(-30deg * var(--i)));
+}
+
+.circle {
+    width: 300px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 50%;
+}
+
+.circle:nth-child(1) div {
+    width: 3px;
+    height: 65%;
+    top: -33px;
+    background-color: white;
+    z-index: 1000;
+}
+
+.circle:nth-child(2) div {
+    width: 4px;
+    background-color: red;
+}
+
+.circle:nth-child(3) div {
+    width: 5px;
+    background-color: green;
+}
+.circle1{
+    width: 240px;
+    height: 240px;
+    top: 25%;
+    left: 23%;
+}
+.circle2 {
+    width: 240px;
+    height: 240px;
+    top: 25%;
+    left: 23%;
+}
+
+.circle3 {
+    width: 180px;
+    height: 180px;
+    top: 33%;
+    left: 30%;
+}
+
+.circle div {
+    position: absolute;
+    height: 50%;
+    transform-origin: bottom;
+    transform: scaleY(1);
+    z-index: 1000;
+}
+
+.dates {
+    padding: 13px 15px 0;
+    text-align: center;
+    background-color: #2f363d;
+    font-size: 18px;
+}
+
+.dates #hours-minutes-secund {
+    color: #fff;
+}
+
+.calendar-wrapper {
+    background-color: #d985b4;
+    width: 450px;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.calendar-wrapper ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.calendar-wrapper .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px 10px;
+    color: #fff;
+}
+
+.calendar-wrapper .calendar-header .curent-date {
+    font-size: 23px;
+    font-weight: 500;
+}
+
+.calendar-wrapper .calendar-body .calendar-day li.active {
+    color: red;
+}
+
+.calendar-wrapper .calendar-header .calendar-arrow i {
+    font-size: 20px;
+    height: 38px;
+    color: black;
+    width: 38px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    background-color: white;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.calendar-wrapper .calendar-body ul li {
+    width: calc(100% / 7);
+}
+
+.calendar-wrapper .calendar-body {
+    padding: 3px;
+}
+
+.calendar-wrapper .calendar-body .date {
+    margin-bottom: 20px;
+}
+
+.calendar-wrapper .calendar-body .date li {
+    margin-top: 30px;
+    cursor: pointer;
+    color: white;
+    z-index: 1;
+}
+
+.calendar-wrapper .calendar-body .date li.inactive {
+    color: gray;
+}
+
+.calendar-wrapper .calendar-body .date li.active {
+    color: red;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.calendar-wrapper .calendar-body .calendar-day li {
+    font-weight: 600;
+    color: #fff;
+}
